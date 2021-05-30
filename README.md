@@ -1,6 +1,4 @@
 # GTP-3_API
- 
-### Testing api request working with OpenAI GPT-3
 
 In this repository you will find example python and javascript codes that goes over the bare minimum required to make api requests to OpenAI's GPT-3 api 
 
