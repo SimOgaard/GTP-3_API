@@ -1,10 +1,14 @@
-import requests
+import requests                                 # library used to call the api
 
-apiKey = open("API_KEY.txt").read()
-headers = {
-    'Authorization': str('Bearer ' + apiKey)
-    }
+apiKey = open("API_KEY.txt").read()             # get secret API key
 
-result = requests.get('https://api.openai.com/v1/engines', headers=headers)
+headers = {                                     # used to pass data with request
+    'Authorization': 'Bearer ' + apiKey         # holds authorization information
+}
 
-print(result.json())
+result = requests.get(
+    'https://api.openai.com/v1/engines',        # endpoint
+    headers=headers
+)
+
+print(result.json())                            # print result
