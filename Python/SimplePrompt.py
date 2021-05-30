@@ -9,8 +9,8 @@ headers = {                                     # used to pass data with request
 }
 
 data = json.dumps({
-    "prompt": "Somebody once told me the world is gonna roll me",   # text gpt-3 will continue on
-    "max_tokens": 15                            # specifies gpt-3's response length
+    "prompt": "According to all known laws of aviation",    # text gpt-3 will continue on
+    "max_tokens": 20                            # specifies gpt-3's response length
 })
 
 result = requests.post(
