@@ -4,19 +4,19 @@ import json                                     # library used to handle json fo
 apiKey = open("API_KEY.txt").read()             # get secret API key
 
 headers = {                                     # used to pass data with request
-    'Content-Type': 'application/json',         # specifies sending datatype
-    'Authorization': 'Bearer ' + apiKey         # holds authorization information
+    "Content-Type": "application/json",         # specifies sending datatype
+    "Authorization": "Bearer " + apiKey         # holds authorization information
 }
 
 data = json.dumps({
-    "prompt": "Once upon a time",               # text gpt-3 will continue on
+    "prompt": "Somebody once told me the world is gonna roll me",   # text gpt-3 will continue on
     "max_tokens": 15                            # specifies gpt-3's response length
 })
 
 result = requests.post(
-    'https://api.openai.com/v1/engines/davinci/completions',    # endpoint
+    "https://api.openai.com/v1/engines/davinci/completions",    # endpoint
     headers=headers,
     data=data
 )
 
-print(result.json())                            # print result
+print(json.loads(data)["prompt"] + result.json()["choices"][0]["text"]) # print formated result

@@ -10,12 +10,12 @@ headers = {                                     # used to pass data with request
 
 data = json.dumps({
     "documents": [                              # items gpt-3 will seach between
-        "plane",
-        "boat",
-        "car",
+        "ABB Industrial Gymnasium",
+        "Sweden",
+        "Hugos mom",
         "ostrich"
     ],
-    "query": "A vehicle with wheels"            # specifies what gpt-3 should search for
+    "query": "A place"                          # specifies what gpt-3 should search for
 })
 
 result = requests.post(
