@@ -12,7 +12,7 @@ To use this repository make an .txt file named API_KEY in the root of this direc
     * Ada: Text parsing, simple classification, address correction, keywords
 2. prompt: "I think therefore i am"
     * Most important setting, it is the text GPT-3 will continue writing on
-    * Usually helps to tell GPT-3 what text represents example: The following is a list of..., The assistant is helpful creative, clever, and very friendly... etc
+    * Usually helps to tell GPT-3 what text represents. Example: The following is a list of..., The assistant is helpful creative, clever, and very friendly... etc
     * It also helps to give GPT-3 examples English: I do not speak Spanish. Spanish: No hablo español. English: How are you? Spanish:
     * tl;dr Can be used to prompt gpt-3 to summarize text
 3. temperature: float 0...1.0
