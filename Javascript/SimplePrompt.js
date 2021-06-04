@@ -11,8 +11,11 @@ fs.readFile('../API_KEY.txt', 'utf8', function(err, apiKey) {
     });
 
     const data = {
-        'prompt': 'Somebody once told me the world is gonna roll me',
-        'max_tokens': 15
+        'prompt': 'English: Hello my name is Simon and i am a student for ABB working in tech and i will do a presentation about GPT-3\nSwedish:',
+        'max_tokens': 50,
+        'top_p': 1,
+        'temperature': 1,
+        //'stop': ['English']
     }
 
     client.post('https://api.openai.com/v1/engines/davinci/completions', data)
